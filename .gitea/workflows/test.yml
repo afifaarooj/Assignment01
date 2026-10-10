@@ -1,0 +1,15 @@
+name: Test Gitea Runner
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Run Test Command
+        run: |
+          echo "Hello Arooj! Gitea Actions Runner is working successfully!"
+          uname -a
+          docker --version
